@@ -1,6 +1,6 @@
 package com.dashuai.learning.mybatis.api;
 
-import com.dashuai.learning.mybatis.model.User;
+import com.dashuai.learning.mybatis.model.Test;
 import com.dashuai.learning.mybatis.service.UserService;
 import com.dashuai.learning.utils.json.JSONParseUtils;
 import com.dashuai.learning.utils.result.ApiResult;
@@ -50,7 +50,7 @@ public class UserOperationApi {
      */
     @PostMapping("/insertUser")
     @ApiImplicitParam(name = "user", value = "用户信息", required = true, dataType = "User")
-    public ApiResult insertUser(@RequestBody User user) {
+    public ApiResult insertUser(@RequestBody Test user) {
         Boolean isSuccess = userService.insertUser(user);
         if (isSuccess) {
             return ApiResult.prepare().success("添加成功!");

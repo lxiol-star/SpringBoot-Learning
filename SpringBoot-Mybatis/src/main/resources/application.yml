@@ -1,0 +1,21 @@
+##Spring表数据库配置
+spring:
+  datasource:
+    open-plat-form-data:
+      url: jdbc:mysql://localhost:3306/local_test?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Shanghai
+      username: root
+      password:
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,slf4j,wall
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-prefix: com.dashuai.learning.mybatis.mapper
+logging:
+  level:
+    com:
+      dashuai:
+        learning:
+          mybatis:
+            mapper: debug

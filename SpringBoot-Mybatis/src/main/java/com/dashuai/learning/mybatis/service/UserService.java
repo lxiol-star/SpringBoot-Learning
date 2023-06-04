@@ -1,6 +1,6 @@
 package com.dashuai.learning.mybatis.service;
 
-import com.dashuai.learning.mybatis.model.User;
+import com.dashuai.learning.mybatis.model.Test;
 
 import java.util.List;
 
@@ -18,13 +18,12 @@ public interface UserService {
      *
      * @return the list
      */
-    List<User> selectAll();
+    List<Test> selectAll();
 
     /**
      * Insert user boolean.
      *
-     * @param user the user
      * @return the boolean
      */
-    Boolean insertUser(User user);
+    Boolean insertUser(Test test);
 }

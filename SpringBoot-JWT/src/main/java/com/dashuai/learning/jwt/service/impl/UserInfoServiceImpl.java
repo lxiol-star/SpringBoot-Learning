@@ -57,7 +57,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         if (Strings.isNotEmpty(userInfo.getUsername()) && Strings.isNotEmpty(userInfo.getPassword())) {
             UserInfo user = userInfoMapper.selectByName(userInfo.getUsername());
             if (user != null) {
-                log.warn("该用户已存在");
+//                log.warn("该用户已存在");
                 return false;
             }
             userInfo.setSalt(randomNumberGenerator.nextBytes().toHex());
@@ -76,7 +76,7 @@ public class UserInfoServiceImpl implements UserInfoService {
             return isSuccess;
 
         }
-        log.warn("未注册成功!");
+//        log.warn("未注册成功!");
         return false;
     }
 
